@@ -1,0 +1,41 @@
+{{ form_start(form, {attr: {"data-command":"submit", "action": "/campaigns/add", "class" :"modal-form"}}) }}
+<div class="container-fluid">
+	<h3>Edition de campagne</h3>
+
+    <div class="input-group">
+    	<div class="input-group-addon">
+        	{{ form_label(form.name) }}
+        </div>
+        {{ form_widget(form.name, {attr: {"class": "form-control"}}) }}
+    </div>
+    {{ form_errors(form.name) }}
+
+	<div class="input-group">
+    	<div class="input-group-addon">
+        	{{ form_label(form.start) }}
+        </div>
+        {{ form_widget(form.start, {attr: {"class": "form-control"}}) }}
+    </div>
+    {{ form_errors(form.start) }}
+    
+    <div class="input-group">
+    	<div class="input-group-addon">
+        	{{ form_label(form.end) }}
+        </div>
+        {{ form_widget(form.end, {attr: {"class": "form-control"}}) }}
+    </div>
+    {{ form_errors(form.end) }}
+
+    <div class="input-group pull-right">
+    	<a class="btn btn-default" data-modal-close="#addCampaignModal">
+    		<span class="glyphicon glyphicon-menu-left"></span>
+    		Annuler
+    	</a>
+    	
+    	<button class="btn btn-success">
+    		<span class="glyphicon glyphicon-ok"></span>
+    		Enregistrer
+    	</button>
+    </div>
+</div>
+{{ form_end(form) }}
